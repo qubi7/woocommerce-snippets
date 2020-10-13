@@ -34,7 +34,7 @@ function override_direktversand_rates( $rates ) {
     global $WC;
 			
     foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-      if ( ( $cart_item['data']->get_shipping_class_id() == 'product-shipping-class_id') ) {
+      if ( ( $cart_item['data']->get_shipping_class_id() == '$product-shipping-class_id') ) {
         $product_qty = $cart_item['quantity'];	
         $parcel_sum_qty = $parcel_sum_qty + ( ceil( $product_qty / $products_per_parcel) ) ;
       }
