@@ -30,7 +30,7 @@ function override_direktversand_rates( $rates ) {
     if( (($rate->method_id == 'flat_rate') && ($rate->instance_id =='$shippig-method_id') ) ) {
 
     
-    // Calculation of the ammount of parcel needed
+    // Calculation of the amount of parcel needed
     global $WC;
 			
     foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
